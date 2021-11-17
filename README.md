@@ -21,3 +21,9 @@ info  | student account
 username  | modir
 password  | Yosef2006
 
+info  | teacher account
+------------- | -------------
+username  | mathteacher
+password  | admin
+
+PS . (I couldn't make the website https because I'm using the infinityfree.net domain) and I'm trying to change this soon
