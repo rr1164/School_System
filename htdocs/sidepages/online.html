@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <style>* {
+  	box-sizing: border-box;
+  
+  	font-size: 16px;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+body {
+  	background-color: #435165;
+font-family:"Poppins";
+}
+@media screen and (max-width: 1406px) {
+.login {
+  	width: 470px;
+}
+}
+@media screen and (min-width: 1406px) {
+.login {
+  	width: 475px;
+}
+}
+
+.login {
+  	background-color: #ffffff;
+  	box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+  	margin: 10px auto;
+}
+.login h1 {
+  	text-align: center;
+  	color: #5b6574;
+  	font-size: 24px;
+  	padding: 20px 0 20px 0;
+  	border-bottom: 1px solid #dee0e4;
+}
+.login form {
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	padding-top: 20px;
+}
+.login form label:first-child {
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	width: 50px;
+  	height: 50px;
+  	background-color: #3274d6;
+  	color: #ffffff;
+}
+.login form input[type="password"], .login form input[type="text"] {
+  	width: 310px;
+  	height: 50px;
+  	border: 1px solid #dee0e4;
+  	margin-bottom: 20px;
+  	padding: 0 15px;
+}
+.login form input[type="text"]::placeholder {
+  	color:#333;
+}
+.login form input[type="number"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.login form input[type="number"]::placeholder {
+    color:#333;
+    font-weight: bold;
+}
+.login form input[type="email"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.login form input[type="email"]::placeholder {
+    color:#333;
+    font-weight: bold;
+}
+body
+{
+  font-family:'Poppins';
+}
+.file-group {
+  position: relative;
+  width: 150px;
+  height:40px;
+  border: 1px solid #ccc; /* 为了显示可见区域，非必须 */
+  overflow: hidden;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  background-color: #6781BC;
+  border-radius: 4px;
+  float: left;
+  margin-left: 20px;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+  margin-top: 20px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: 100;
+    font-family: 'Montserrat';
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+input[type="submit"]:hover {
+  background-color: #2868c7;
+    transition: background-color 0.2s;
+}
+.file-group input {
+    float: left;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 300px;
+  opacity: 0;
+    padding: -130px;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+}
+.file-group:hover {
+  transition: all .3s ease-in;
+  background-color: #4B6DBD;
+}
+
+        </style>
+    </head>
+	<body>
+        <div style="display:none;">
+      <h1 style="display:none;"><?php
+  
+  ?></h1></div><div class="login">
+			<h1 style="color:#333;">ONLINE ADMISSION</h1>
+			<form action="online.php" method="post" enctype="multipart/form-data">
+        <input type="number" name="birthdate" placeholder="student's birthdate">
+        <h4 style="text-align: center;font-size:17px;
+    margin-left: 40px;">photocopy of birth certification</h4>
+        <div class="file-group" style="margin-top: 0px;width:240px;height:60px;font-size: 19px;padding-top: 10px;">
+<input type="file" name="firstphotocopy[]"  accept="application/java-vm"  id="J_File">upload photocopy
+</div> 
+<br><br>
+<h4 style="text-align: center;font-size:15px;">Photocopy of Passports of Student & Parents(2 each)</h4>
+        <div class="file-group">
+<input type="file" name="studentfirst[]"  accept="application/java-vm"  id="J_File">student passport 1
+</div> <br><br>  <div class="file-group">
+<input type="file" name="parentfirst[]"  accept="application/java-vm"  id="J_File">parent passport 1
+</div> 
+<br><br>
+<h4 style="text-align: center;font-size:15px;">Photocopy of IQAMA of Student & Parents</h4>
+        <div class="file-group">
+<input type="file" name="firstiqama[]"  accept="application/java-vm"  id="J_File">student iqama 1
+</div> <br><br>  <div class="file-group">
+<input type="file" name="thirdiqama[]"  accept="application/java-vm"  id="J_File">parent iqama 1
+</div>
+<h4 style="text-align: center;font-size:15px;">Report Cards of ALL previous classes attended</h4>
+        <div class="file-group" style="width:240px;height:60px;margin-left:30px;font-size: 12px;font-size: 15px;padding-top: 10px;"> 
+<input type="file" name="reportcardone[]" style="margin-left: 200px;"  accept="application/java-vm"  id="J_File">report card record from 2018</div> <br><br>
+<h4 style="text-align: center;font-size:18px;margin-top:90px;margin-left: -190px;">Finger Print record</h4>
+        <div class="file-group" style="width:240px;height:60px;font-size: 16px;margin-top: 140px;margin-left: -214px;font-size: 17px;padding-top: 10px;"> 
+<input type="file" name="Fingerprint[]" accept="application/java-vm"  id="J_File">Upload Fingerprint</div> 
+<h4 style="text-align: center;font-size:15px;padding-left: 40px;">Noor Record from previous school</h4>
+        <div class="file-group" style="width:240px;height:60px;font-size: 17px;padding-top: 10px;margin-top: -10px;"> 
+<input type="file" name="noor[]" accept="application/java-vm"  id="J_File">upload noor record</div> <br>
+<h4 style="text-align: center;font-size:13.5px;">Previous Approval from the Ministry of Education</h4>
+        <div class="file-group" style="width:240px;height:60px;font-size: 17px;padding-top: 10px;"> 
+<input type="file" name="firstministry[]"  accept="application/java-vm"  id="J_File">upload photocopy</div><br><br> 
+<h4 style="text-align: center;font-size:16.5px;">Leaving Certificate from previous school </h4>
+        <div class="file-group" style="width:240px;height:60px;font-size: 17px;padding-top: 10px;"> 
+<input type="file" name="leaving[]"  accept="application/java-vm"  id="J_File" style="font-size: 14px;">upload certificate </div>
+<h4 style="text-align: center;font-size:14.5px;">Stamped Employment Certificate of the Student’s Sponsor</h4>
+        <div class="file-group" style="width:240px;height:60px;font-size: 17px;padding-top: 10px;"> 
+<input type="file" name="employment[]"  accept="application/java-vm"  id="J_File" style="font-size: 11px;">Employment certificate</div>
+<h4 style="text-align: center;font-size: 20px;    margin-left: -240px;
+    margin-top: 100px;">Immunization Record</h4>
+        <div class="file-group" style="width:240px;height:60px;font-size: 17px;padding-top: 10px;margin-top: -20px;"> 
+<input type="file" name="firstimu[]"  accept="application/java-vm"  id="J_File">upload photocopy</div>
+<h4 style="text-align: center;font-size:15px;">Passport size Coloured Photographs</h4>
+        <div class="file-group" style="width:240px;height:60px;font-size: 17px;padding-top: 10px;margin-left: 40px;"> 
+<input type="file" name="firstcoloured[]"  accept="application/java-vm"  id="J_File">upload photocopy</div><br><br>  
+<h4 style="text-align: center;font-size:20px;margin-top: 30px;margin-left: -10px;">1” x 1” Coloured Photographs</h4>
+        <div class="file-group" style="width:240px;height:60px;font-size: 17px;padding-top: 10px"> 
+<input type="file" style="padding-top: 20px;font-size: 20px;" name="firstphotograph[]"  accept="application/java-vm"  id="J_File">upload photocopy</div> 
+<br>
+  <input style="margin-top: 20px" placeholder="type your email" name="telephone" type="email"><br>
+  <input style="margin-top: 20px" placeholder="type your telephone number" name="tele" type="number"><br>
+<input type="submit" name="submit" value="Upload all files">
+</form>
+		</div>
+
+	</body>
+</html>
