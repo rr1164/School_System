@@ -6,9 +6,9 @@
 * students uploading presentations / homeworks
 * full admission with acceptance / rejection
 * students sheet download for each subject
-#credentails to use
+# credentials to use
 
-info  | Admin
+info  | Admin account
 ------------- | -------------
 username  | modir
 password  | admin
