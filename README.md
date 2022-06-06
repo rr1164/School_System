@@ -1,5 +1,5 @@
 # School System
-# this is a very simple school system consisting of
+# this is a mock school system consisting of
 * admin login / registration
 * teachers login/ registration
 * student login / registration
